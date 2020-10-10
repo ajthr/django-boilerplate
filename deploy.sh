@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Get the name of the app
-read -p "Enter your name : " app
+read -p "Enter app name : " app
 
 # login with heroku
 heroku container:login

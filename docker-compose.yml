@@ -17,7 +17,7 @@ services:
             - DATABASE_NAME=app
             - DATABASE_USER=postgres
             - DATABASE_PASSWORD=postgrespassword
-            - SECRET_KEY=supersecretkey
+            - SECRET_KEY=p9sw62x^hb4fk3zti%%y)j8*86yx11#cbp8ea+kocmzy_4ou!h
         depends_on: 
             - db
 
