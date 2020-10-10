@@ -13,10 +13,11 @@ services:
             python manage.py migrate &&
             python manage.py runserver 0.0.0.0:8000"
         environment: 
-            - DB_HOST=db
-            - DB_NAME=app
-            - DB_USER=postgres
-            - DB_PASS=postgrespassword
+            - DATABASE_HOST=db
+            - DATABASE_NAME=app
+            - DATABASE_USER=postgres
+            - DATABASE_PASSWORD=postgrespassword
+            - SECRET_KEY=supersecretkey
         depends_on: 
             - db
 
