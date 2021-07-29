@@ -1,5 +1,4 @@
-FROM python:3.8-alpine
-LABEL maintainer="Ajith Ramachandran <ajithar204@gmail.com>"
+FROM python:3.9-alpine
 
 ENV PYTHONUNBUFFERED 1
 
@@ -12,7 +11,7 @@ RUN apk del .tmp-build-deps
 
 RUN mkdir /app
 WORKDIR /app
-COPY ./app /app
+COPY . /app
 
 RUN adduser -D user
 USER user

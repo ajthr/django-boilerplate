@@ -2,8 +2,9 @@ version: "3"
 
 services: 
     app: 
+        container_name: app
         build: 
-            context: .
+            context: ./app
         ports: 
             - "8000:8000"
         volumes: 
@@ -15,15 +16,16 @@ services:
         environment: 
             - DATABASE_HOST=db
             - DATABASE_NAME=app
-            - DATABASE_USER=postgres
-            - DATABASE_PASSWORD=postgrespassword
+            - DATABASE_USER=${DB_ADMIN_USER}
+            - DATABASE_PASSWORD=${DB_ADMIN_PWD}
             - SECRET_KEY=p9sw62x^hb4fk3zti%%y)j8*86yx11#cbp8ea+kocmzy_4ou!h
         depends_on: 
             - db
 
     db:
+        container_name: database
         image: postgres:13-alpine
         environment: 
             - POSTGRES_DB=app
-            - POSTGRES_USER=postgres
-            - POSTGRES_PASSWORD=postgrespassword
+            - POSTGRES_USER=${DB_ADMIN_USER}
+            - POSTGRES_PASSWORD=${DB_ADMIN_PWD}
