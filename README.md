@@ -21,6 +21,11 @@ A starting point for python-django websites and apis.
 ### with docker
 
 - Open a command line window and go to the project's directory.
+- create a .env file and add environment variables.
+    ```
+    DB_ADMIN_USER=user
+    DB_ADMIN_PWD=userpwd
+    ```
 - setup docker container:\
     `docker build . && docker-compose build`
 - Run the project:\
@@ -49,8 +54,7 @@ A starting point for python-django websites and apis.
 ### Note
 
 - Remove djangorestframework from [requirements.txt](requirements.txt) if app is not an api.
-- Maintainer name can be changed in [Dockerfile](Dockerfile).
 
-Copyright (c) 2020 Ajith Ramachandran
+Copyright (c) 2021 Ajith Ramachandran
 
 [MIT License](LICENSE)
